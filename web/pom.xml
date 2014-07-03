@@ -82,16 +82,6 @@
                         </configuration>
                     </execution>
                 </executions>
-                <!-- native2ascii 使用的tools.jar -->
-                <dependencies>
-                    <dependency>
-                        <groupId>com.sun</groupId>
-                        <artifactId>tools</artifactId>
-                        <version>1.7.0</version>
-                        <scope>system</scope>
-                        <systemPath>${java.home}/../lib/tools.jar</systemPath>
-                    </dependency>
-                </dependencies>
             </plugin>
             <plugin>
                 <groupId>com.googlecode</groupId>
@@ -231,12 +221,12 @@
                     <![CDATA[jdbc:mysql://localhost:3306/${db.name}?autoReconnect=true&amp;useUnicode=true&amp;characterEncoding=utf-8]]>
                 </connection.url>
                 <connection.username>root</connection.username>
-                <connection.password/>
+                <connection.password>123456</connection.password>
                 <jpa.showSql>true</jpa.showSql>
                 <jpa.generateDdl>false</jpa.generateDdl>
                 <jpa.database>MYSQL</jpa.database>
                 <jpa.databasePlatform>org.hibernate.dialect.MySQL5InnoDBDialect</jpa.databasePlatform>
-                <log.dir>D:/Backup/es</log.dir>
+                <log.dir>/Volumes/File/临时文档/es-log/</log.dir>
 
                 <shiro.uid.cookie.domain></shiro.uid.cookie.domain>
                 <shiro.uid.cookie.path>/</shiro.uid.cookie.path>
@@ -261,7 +251,7 @@
                 <jpa.generateDdl>false</jpa.generateDdl>
                 <jpa.database>MYSQL</jpa.database>
                 <jpa.databasePlatform>org.hibernate.dialect.MySQL5InnoDBDialect</jpa.databasePlatform>
-                <log.dir>D:/Backup/es</log.dir>
+                <log.dir>/Volumes/File/临时文档/es-log</log.dir>
 
                 <shiro.uid.cookie.domain></shiro.uid.cookie.domain>
                 <shiro.uid.cookie.path>/</shiro.uid.cookie.path>
