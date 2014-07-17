@@ -68,6 +68,16 @@
         <appender-ref ref="SYS-USER"/>
     </logger>
 
+
+	<logger name="org.springframework.web" level="DEBUG"/>
+	<logger name="org.springframework" level="INFO"/>
+	<logger name="org.hibernate" level="WARN"/>
+	<logger name="net.sf.ehcache" level="INFO"/>
+	<logger name="org.apache.shiro" level="INFO"/>
+	<logger name="org.springframework.web.servlet" level="INFO"></logger>
+	<logger name="org.eclipse.jetty" level="INFO"></logger>
+	<logger name="url.filter" level="INFO"></logger>
+	
     <!-- cache -->
     <logger name="com.sishuok.es.extra.aop" level="info">
             <appender-ref ref="STDOUT"/>

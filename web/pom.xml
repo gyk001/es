@@ -30,7 +30,7 @@
                     </webAppConfig>
                     <connectors>
                         <connector implementation="org.eclipse.jetty.server.nio.SelectChannelConnector">
-                            <port>9080</port>
+                            <port>8888</port>
                             <!--<maxIdleTime>60000</maxIdleTime>-->
                         </connector>
                     </connectors>
@@ -62,27 +62,31 @@
 
             </plugin>
 
-
-
-            <plugin>
-                <groupId>org.codehaus.mojo</groupId>
-                <artifactId>native2ascii-maven-plugin</artifactId>
-                <version>1.0-alpha-1</version>
-                <executions>
-                    <execution>
-                        <phase>generate-resources</phase>
-                        <goals>
-                            <goal>native2ascii</goal>
-                        </goals>
-                        <configuration>
-                            <encoding>UTF-8</encoding>
-                            <src>src/main/messages</src>
-                            <dest>target/${project.artifactId}/WEB-INF/classes</dest>
-                            <includes>**/*.*</includes>
-                        </configuration>
-                    </execution>
-                </executions>
-            </plugin>
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>native2ascii-maven-plugin</artifactId>
+				<version>1.0-beta-1</version>
+				<executions>
+					<execution>
+						<phase>generate-resources</phase>
+						<goals>
+							<goal>native2ascii</goal>
+						</goals>
+						<configuration>
+							<encoding>UTF-8</encoding>
+							<src>src/main/messages</src>
+							<dest>target/${project.artifactId}/WEB-INF/classes</dest>
+							<includes>
+								<include>**/*.properties</include>
+							</includes>
+						<excludes>
+							<exclude>**/*.class</exclude>
+						</excludes>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+            <!--
             <plugin>
                 <groupId>com.googlecode</groupId>
                 <artifactId>maven-db-plugin</artifactId>
@@ -124,7 +128,7 @@
                     </dependency>
                 </dependencies>
             </plugin>
-
+            -->
             <!--<plugin>-->
                 <!--<groupId>com.sishuok</groupId>-->
                 <!--<artifactId>codegen</artifactId>-->
@@ -144,11 +148,11 @@
     </build>
 
     <dependencies>
-        <dependency>
-            <groupId>com.sishuok</groupId>
-            <artifactId>es-common</artifactId>
-            <version>${sishuok.common.version}</version>
-        </dependency>
+		<dependency>
+			<groupId>cn.guoyukun.itravel</groupId>
+			<artifactId>itravel-common</artifactId>
+			<version>${sishuok.common.version}</version>
+		</dependency>
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
